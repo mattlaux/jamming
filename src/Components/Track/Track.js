@@ -5,9 +5,9 @@ export class Track extends React.Component {
     
     renderAction() {
         if (this.props.isRemoval) {
-            return <button class="Track-action">-</button>
+            return <button className="Track-action">-</button>
         } else {
-            return <button class="Track-action">+</button>
+            return <button className="Track-action">+</button>
         }
     }
     
