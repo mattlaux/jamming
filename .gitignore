@@ -11,6 +11,9 @@
 # production
 /build
 
+# git secret
+.gitsecret/keys/random_seed
+
 # misc
 .DS_Store
 .env.local
@@ -21,3 +24,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/util/Spotify.js
