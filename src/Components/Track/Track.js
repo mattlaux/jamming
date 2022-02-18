@@ -6,6 +6,7 @@ export class Track extends React.Component {
         super(props);
         this.addTrack = this.addTrack.bind(this);
         this.removeTrack = this.removeTrack.bind(this);
+        this.trackPreview = this.trackPreview.bind(this);
     }
 
     renderAction() {
@@ -23,6 +24,18 @@ export class Track extends React.Component {
     removeTrack() {
         this.props.onRemove(this.props.track);
     }
+
+    togglePreview() {
+        if (this.props.track.trackPreview) {
+            return <button className="Track-action" onClick={this.trackPreview}>Play Preview</button>
+        } else {
+            return <button className="Track-action" onClick={this.trackPreview}>N/A</button>
+        }
+    }
+
+    trackPreview() {
+        this.props.onClick(this.props.track);
+    }
     
     render() {
         return (
@@ -32,6 +45,7 @@ export class Track extends React.Component {
                     <p>{this.props.track.artist} | {this.props.track.album}</p>
                 </div>
                 { this.renderAction() }
+                { this.togglePreview() }
             </div>
         )
     };

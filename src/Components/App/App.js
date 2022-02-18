@@ -56,6 +56,13 @@ class App extends React.Component {
     });
   };
 
+  trackPreview(track) {
+    window.open(
+      track.trackPreview,
+      '_blank'
+    );
+  }
+
   render() {
     return (
       <div>
@@ -65,7 +72,8 @@ class App extends React.Component {
           <div className="App-playlist">
             <SearchResults 
               searchResults={this.state.searchResults} 
-              onAdd={this.addTrack} />
+              onAdd={this.addTrack}
+              onClick={this.trackPreview} />
             <Playlist 
               playlistName={this.state.playlistName} 
               playlistTracks={this.state.playlistTracks} 
