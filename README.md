@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+This is an example project with React.
+
+It has good examples of handling responses from an API. Keep this repo for now.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
